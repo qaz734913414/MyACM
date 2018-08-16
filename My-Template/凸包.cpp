@@ -46,7 +46,7 @@ double ConvexHull(std::vector<Point> points) {
     }
     std::swap(points[0], points[Basic]);
     // 对其它点进行极角排序
-    sort(points.begin() + 1, points.end(), [&] (const Point &A, const Point &B) {
+    std::sort(points.begin() + 1, points.end(), [&] (const Point &A, const Point &B) {
         double Temp = (A - points[0]) ^ (B - points[0]);
         if (Temp > 0) {
             return true;
