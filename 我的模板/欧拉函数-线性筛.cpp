@@ -11,7 +11,7 @@ int Prime[maxn];
 int Tot;
 
 // 同时求得欧拉函数和素数表
-void Phi_Prime() {
+void PhiPrime() {
     memset(IsPrime, false, sizeof(IsPrime));
     Phi[1] = 1;
     Tot = 0;
