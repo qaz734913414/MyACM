@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 // 普通读入挂
 template <class T>
 inline bool read(T &ret) {
@@ -18,6 +19,7 @@ inline bool read(T &ret) {
     ret *= sgn;
     return true;
 }
+
 // 普通输出挂
 template <class T>
 inline void out(T x) {
@@ -30,6 +32,7 @@ inline void out(T x) {
     }
     putchar(x % 10 + '0');
 }
+
 // 超级读写挂
 namespace IO{ 
     #define BUF_SIZE 100000 
