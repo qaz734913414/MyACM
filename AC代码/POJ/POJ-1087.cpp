@@ -114,12 +114,14 @@ int main(int argc, char *argv[]) {
     mem(Adj, 0);
     read(N);
     vector<string> Plug(N + 1);
+    // 插头
     for (int i = 1; i <= N; ++i) {
         cin >> Plug[i];
         m[Plug[i]] = i;
     }
     read(M);
     AddPlugCnt = 0;
+    // 设备与插头相连
     for (int i = 1; i <= M; ++i) {
         string device, plug;
         cin >> device >> plug;
@@ -131,11 +133,13 @@ int main(int argc, char *argv[]) {
         Adj[0][m[device]] = 1;
     }
     read(K);
+    // 插头相连
     for (int i = 1; i <= K; ++i) {
         string plug1, plug2;
         cin >> plug1 >> plug2;
         Adj[m[plug1]][m[plug2]] = 1;
     }
+    // 插头与汇点相连
     for (int i = 1; i <= N; ++i) {
         Adj[m[Plug[i]]][N + M + AddPlugCnt + 1] = INF;
     }
