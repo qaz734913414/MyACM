@@ -2,6 +2,7 @@
 // 正无穷
 const int INF = 0x3f3f3f3f;
 const int maxn = 1e5 + 5;
+
 // 松弛更新数组
 int Dis[maxn];
 struct Edge {
