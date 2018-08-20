@@ -29,11 +29,16 @@ void Init() {
 }
 
 // 添加一条由U至V权值为Weight的边
-void AddEdge(int U, int V, int Weight) {
+void AddEdge(int U, int V, int Weight, int ReverseWeight = 0) {
     edges[Tot].V = V;
     edges[Tot].Weight = Weight;
     edges[Tot].Next = Head[U];
     Head[U] = Tot++;
+    // 反向建边
+    edges[Tot].V = U;
+    edges[Tot].Weight = ReverseWeight;
+    edges[Tot].Next = Head[V];
+    Head[V] = Tot++;
 }
 
 // Bfs搜索分层图，Start:起点，End:终点
