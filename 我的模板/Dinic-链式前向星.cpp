@@ -90,6 +90,7 @@ int Dfs(int Vertex, int End, int NowFlow) {
     return UsableFlow;
 }
 
+// Dinic算法，Start:起点，End:终点
 int Dinic(int Start, int End) {
     int MaxFlow = 0;
     while (Bfs(Start, End)) {
@@ -99,6 +100,7 @@ int Dinic(int Start, int End) {
         }
         MaxFlow += Dfs(Start, End, INF);
     }
+    // 返回结果
     return MaxFlow;
 }
 
