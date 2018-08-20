@@ -9,7 +9,7 @@ struct Link {
     Link(int _V = 0, int _Weight = 0, int _Next = 0): V(_V), Weight(_Weight), Next(_Next) {}
 };
 
-// 边
+// 边，一定要开到足够大
 Link edges[maxn << 1];
 // Head[i]为点i上最后一条边的编号
 int Head[maxn];
